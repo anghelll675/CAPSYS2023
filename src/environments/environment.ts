@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  URL: 'https://localhost:7063/api/v1/',
+  LOCALSTORAGENAME: 'tokenCAPSYS2023'
 };
 
 /*

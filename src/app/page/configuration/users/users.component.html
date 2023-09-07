@@ -1,0 +1,121 @@
+<div class="page-capsys">
+  <div class="row">
+    <div class="col-sm-12">
+
+    </div>
+  </div>
+
+  <mat-accordion class="mat-elevation-z8">
+    <mat-expansion-panel style="margin-right: 10px;" [expanded]="panelOpenState" (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon style="margin-top: 5px" fontSet="fa-solid" fontIcon="fa-magnifying-glass"></mat-icon>
+          Filtro
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+
+      <form [formGroup]="formFilter">
+        <div class="row">
+
+          <div class="col-sm-3">
+            <mat-form-field appearance="outline">
+              <mat-label>Correo</mat-label>
+              <input matInput formControlName="email">
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
+
+      <div class="row">
+        <div class="col-12">
+          <mat-action-row>
+            <button (click)="isApiLoading ? '' : getListUsers()" mat-raised-button class="btn-save-confirm"
+              [disabled]="!this.formFilter.valid" type="submit">
+              <mat-icon class="icon-spinner" *ngIf="isApiLoading">
+                <mat-spinner class="mat-spinner" diameter="20"></mat-spinner>
+              </mat-icon>
+              <span style="margin: 0px; padding: 0px;" *ngIf="!isApiLoading">Buscar</span>
+            </button>
+            <button mat-raised-button class="btn-clear" type="submit" (click)="clearFormFilter()">Limpiar</button>
+          </mat-action-row>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+<br>
+
+
+  <mat-card style="margin-right: 10px;">
+    <mat-card-header>
+      <mat-card-title>Lista de usuarios</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-12">
+          <mat-divider></mat-divider>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 table-container">
+          <mat-table matSort [dataSource]="dataSource">
+
+            <ng-container matColumnDef="actions">
+              <mat-header-cell style="width: 120px;" *matHeaderCellDef>Acciones</mat-header-cell>
+              <mat-cell *matCellDef="let element">
+
+                <button (click)="editUser(element.id)" title="Editar"
+                  class="action-icon fa-solid fa-pen" mat-icon-button>
+                </button>
+
+              </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+              <mat-header-cell style="width: 120px;" *matHeaderCellDef mat-sort-header>Nombre</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+            </ng-container>
+
+
+            <ng-container matColumnDef="lastName">
+              <mat-header-cell style="width: 120px;" *matHeaderCellDef mat-sort-header>Apellidos</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{element.lastName}}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="email">
+              <mat-header-cell style="width: 100px;" *matHeaderCellDef mat-sort-header>Correo</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{element.email}}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="userType">
+              <mat-header-cell style="width: 100px;" *matHeaderCellDef mat-sort-header>Tipo de Usuario</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{element.userType}}</mat-cell>
+            </ng-container>
+
+
+
+            <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+            <tr *matNoDataRow>
+              <td [attr.colspan]="14" [rowSpan]="14">
+                <p class="text-no-information-table">Sin Informacion</p>
+              </td>
+            </tr>
+          </mat-table>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons="true">
+      </mat-paginator>
+    </mat-card-actions>
+
+  </mat-card>
+
+
+
+
+</div>

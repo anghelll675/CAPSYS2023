@@ -1,0 +1,29 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <img height="100%" width="10%" src="../../../assets/img/logo" alt="logo" />
+    <button style="margin-left: 3%;" class="menu" (click)="clickMenu()">
+      <mat-icon fontSet="fa-solid" [fontIcon]="menuOpen === true ? 'fa-xmark' : 'fa-bars'" matListIcon class="hamburger"></mat-icon>
+    </button>
+    <span style="flex: 1 1 auto;"></span>
+    <div class="user-profile-circle p-2" [matMenuTriggerFor]="user_profile_box">
+      <span>CAPSYS</span>
+      <span class="fa-solid fa-caret-down alineacion"></span>
+    </div>
+    <mat-menu #user_profile_box="matMenu" class="user-profile-box">
+      <div class="row m-0">
+        <div class="col-2">
+          <mat-icon fontSet="fa-solid" fontIcon="fa-id-badge" class="pt-1 user-profile-image"></mat-icon>
+        </div>
+        <div class="col-10">
+          <h5 mat-card-title class="mt-4 user-profile-name">{{userName}}</h5>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <button mat-menu-item (click)="logOut()">
+        <mat-icon style="font-size: 30px; background-color: transparent;" fontSet="fa-solid" fontIcon="fa-arrow-right-from-bracket"></mat-icon>
+        <span>Cerrar sesión</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-divider></mat-divider>

@@ -1,0 +1,75 @@
+mat-toolbar {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+mat-sidenav {
+  width: 300px;
+}
+
+mat-icon {
+  background: #ffffff;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+}
+
+mat-menu {
+  background: white;
+}
+
+.dropdown-toggle::after {
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::ng-deep .user-profile-box {
+  max-width: unset !important;
+  min-width: unset !important;
+  width: 300px;
+}
+
+.user-profile-name {
+  margin-bottom: unset !important;
+  font-size: 15px;
+}
+
+.user-profile-image {
+  font-size: 50px;
+  background: white;
+}
+
+.user {
+  background: white;
+}
+
+.user-profile-circle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hamburger {
+  font-size: 40px;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+.menu {
+  width: 34px;
+  margin-right: 10px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+
+  &:focus {
+    outline-color: #ffffff;
+    outline-style: none;
+  }
+}

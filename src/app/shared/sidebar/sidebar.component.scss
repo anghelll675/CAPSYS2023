@@ -1,0 +1,56 @@
+mat-expansion-panel {
+  box-shadow: unset !important;
+  background: #494949;
+  color: white !important;
+  border-radius: 0px;
+  background-color: #fff;
+}
+
+.mat-list-base {
+  .mat-list-item {
+      .mat-list-item-content {
+          padding: 0 24px !important;
+      }
+  }
+}
+
+.mat-list-base {
+  .mat-subheader {
+      color: black;
+  }
+}
+
+.mat-nav-list {
+  background-color: white;
+  color: rgb(0, 0, 0) !important;
+}
+
+.ionc {
+  color: white !important;
+}
+
+// .navbar1 {
+//   &:hover{
+//     background-color: #b82a0382;
+//     color: white !important;
+//   }
+// }
+
+.sub-menu-selected {
+  background-color: #B82B03;
+  color: white !important;
+}
+
+
+ng-container{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+// mat-icon {
+//   color: #B82B03;
+// }
+
+.active {
+  color: #673AB7;
+  font-weight: bold!important;
+}

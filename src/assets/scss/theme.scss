@@ -1,0 +1,157 @@
+
+.page-capsys {
+    padding: 10px;
+    height: 100%;
+}
+
+.mat-row:nth-child(even) {
+    background-color: #e6e6e6;
+  }
+
+  .mat-row:nth-child(odd) {
+    background-color: white;
+  }
+  /*Para tablas de resultados color de las lineas*/
+mat-row:hover  {
+    background-color: #e5e2e2!important;/* #b82a039a !important;*/
+    /*font-weight: bold;*/
+  }
+
+  /*Color de spinner todos los botones*/
+  .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #f0f1f1;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+/*
+  mat-card-title {
+    display: flex;
+    justify-content: center;
+  }*/
+
+  mat-accordion mat-expansion-panel mat-action-row {
+    justify-content: center !important;
+  }
+
+  mat-dialog-actions {
+    justify-content: center !important;
+  }
+
+  /*Botones para editar*/
+.action-icon {
+    font-size: 20px;
+    color: #072945;
+  }
+  .action-icon-edit-delete {
+    font-size: 22px;
+    color: #072945;
+  }
+  /*Boton Logoaut navbar*/
+  .icon-logout{
+    color: #072945!important;
+
+  }
+
+  mat-datepicker-toggle {
+    color: #072945 !important;
+   }
+
+
+//button seleccion
+.mat-calendar-arrow {
+    fill: #072945;
+}
+.mat-calendar-table-header, .mat-calendar-body-label,
+.mat-calendar-body-cell-content,
+.mat-date-range-input-separator {
+    color: #072945;
+}
+
+.mat-mdc-button.mat-unthemed {
+  --mdc-text-button-label-text-color: #072945;;
+}
+
+.mat-calendar-body-selected {
+    background-color: #072945;
+    color: #fff;
+}
+/*flechas seleccion datapicker < >*/
+.mat-datepicker-toggle,
+.mat-datepicker-content
+.mat-calendar-next-button,
+.mat-datepicker-content
+.mat-calendar-previous-button {
+    color: #072945;
+}
+
+.mat-expansion-panel-header-description, .mat-expansion-indicator::after {
+  color:   #072945;
+}
+
+.mat-drawer-container {
+  background-color: #fafafa;
+  color: #072945;
+}
+
+.mat-mdc-paginator {
+  background: #fff;
+  color: #072945;
+}
+
+  /*
+  mat-expansion-panel {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+*/
+
+ /* Agregado clases */
+/*Cambiamos el color de los close para los dialog edit-register-confirm*/
+.icon-close {
+    color: white;
+    font-size: 22px;
+    padding-top: 2px;
+  }
+  /*Cambiamos el color de  + add en Menu principal*/
+  .icon-add{
+    color:#072945;
+    font-size: 23px;
+    padding-top: 2px;
+  }
+  .icon-filters{
+    color:#072945;
+    padding-top: 3px;
+  }
+  /*Para los botones de guardar, confirmar, cambiamos los colores*/
+  .btn-save-confirm{
+    background-color:#072945!important;
+    color:white!important;
+  }
+
+  /*Para Botones spinner*/
+  .icon-spinner{
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  /*Cambiamos el color de los toolbar en las ventanas de dialog*/
+  .mat-toolbar{
+    background:#072945;
+    color:white;
+  }
+  /*Cambiamos el color cuando posicionamos el mause en el evento close*/
+  .btn-close-dialog:hover{
+    background-color: #0c3f69;
+  }
+  /*Cambiamos el color para el color cuando posicionamos el mause en el boton de guardar,registrar, confirmar*/
+  .btn-save-confirm:hover{
+    background-color: #0c3f69!important;
+  }
+
+
+
+
+
+
+

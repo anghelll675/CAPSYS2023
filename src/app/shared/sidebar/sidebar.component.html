@@ -1,0 +1,29 @@
+<mat-nav-list *ngFor="let item of menu; let i = index">
+  <ng-container *ngIf="!item.subMenus">
+    <a mat-list-item style="height: 0;"></a>
+    <a matSubheader title="item.name" mat-list-item [routerLink]="item.route" routerLinkActive="active">
+      <mat-icon [fontSet]="item.icon.fontSet" [fontIcon]="item.icon.fontIcon" matListIcon></mat-icon>
+      &nbsp;
+      <span mat-line>{{item.name}}</span>
+    </a>
+    <mat-divider></mat-divider>
+  </ng-container>
+
+  <ng-container *ngIf="item.subMenus">
+    <mat-expansion-panel [expanded]="item.selected">
+      <mat-expansion-panel-header [title]="item.name">
+        <mat-panel-title>
+          <mat-icon style="font-size: 25px;" [fontSet]="item.icon.fontSet" [fontIcon]="item.icon.fontIcon" matListIcon></mat-icon>
+          <h2 matSubheader> {{item.name}}</h2>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <a [title]="subMenu.name" mat-list-item matSubheader *ngFor="let subMenu of item.subMenus"
+        [routerLink]="item.route  + subMenu.route" routerLinkActive="active">
+        <mat-icon [fontSet]="subMenu.icon.fontSet" [fontIcon]="subMenu.icon.fontIcon" matListIcon></mat-icon>
+        &nbsp;
+        <span mat-line>{{subMenu.name}}</span>
+      </a>
+    </mat-expansion-panel>
+    <mat-divider></mat-divider>
+  </ng-container>
+</mat-nav-list>

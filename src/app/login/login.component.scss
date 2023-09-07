@@ -1,0 +1,51 @@
+@media (max-width:750px ) {
+  .login-card{
+      width: 90%;
+  }
+}
+
+.login {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(rgba(228, 228, 228, 0.5) 10px, #007bf762 50%);
+}
+
+.login-card {
+  background-color: rgb(255 255 255);
+  max-width: 400px;
+  border:2px solid gainsboro;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+mat-form-field{
+  width: 100%;
+}
+
+img{
+  /*margin-top: 10px;*/
+  margin-bottom: 10px;
+}
+
+.logo-card {
+  width: 90%;
+  align-self: center;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+}
+
+.buttonIniciar,.buttonRecuperar{
+  width: 100%;
+  margin-bottom: 20px;
+  color: white;
+  background-color: #000000;;
+}
+
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+<mat-sidenav-container style="height: 90%;">
+  <mat-sidenav #sidenav [mode]="'side'" role="navigation">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content role="main">
+    <div style="margin-left: 2%;">
+      <router-outlet main></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
